@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header';
+import PersonList from './PersonList';
 import jsonData from '../../public/data/people.json';
 
 export default class App extends Component {
@@ -13,7 +14,9 @@ export default class App extends Component {
         return (
             <div>
                 <Header />
-                <h1>{this.state.people[0].personal.first_name}</h1>
+            
+
+                <PersonList people={this.state.people} />
             </div>
         );
     }
