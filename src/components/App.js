@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
+import Header from './Header';
+
 export default class App extends Component {
     render() {
         return (
-            <h1>Hello</h1>
+            <div>
+                <Header />
+                <h1>Hello</h1>
+            </div>
         );
     }
 }

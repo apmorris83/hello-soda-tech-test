@@ -1,0 +1,15 @@
+.jumbotron {
+    background-color: #333333; 
+}
+
+.vertical-center {
+  min-height: 20%;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.logo-svg {
+    width: 200px;
+    align-content: left;
+}
