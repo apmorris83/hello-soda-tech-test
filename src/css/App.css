@@ -1,3 +1,6 @@
-.bground {
-    background-color: #9dcfe6;
+html, body {
+    background: #9dcfe6;
+    min-height: 100%;
+    margin: 0;
+    height: 100%;
 }

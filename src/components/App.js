@@ -13,10 +13,8 @@ export default class App extends Component {
     render() {
         console.log(jsonData);
         return (
-            <div className="bground">
+            <div>
                 <Header />
-            
-
                 <PersonList people={this.state.people} />
             </div>
         );
