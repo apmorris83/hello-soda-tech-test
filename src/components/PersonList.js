@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import '../css/PersonList.css';
-
-// import PersonCard from './PersonCard';
+import DataNav from './DataNav';
 
 function PersonList (props) {
     return (
@@ -18,14 +17,15 @@ function PersonList (props) {
                             <h4>{person.personal.first_name} {person.personal.last_name}, {person.personal.age}</h4>
                             <h5>{person.personal.job_title}, {person.personal.job_company}</h5>
                             <h5>{person.personal.city}, {person.personal.country}</h5>
-                            <a className="btn btn-primary pull-right" role="button" data-toggle="collapse" data-target={`#${id}`} aria-expanded="false" aria-controls={`${id}`}>
-                            toggle data
-                            </a>
                             </div>
+                            <div className="media-right toggle-button">
+                                <a className="btn btn-primary" role="button" data-toggle="collapse" data-target={`#${id}`} aria-expanded="false" aria-controls={`${id}`}>
+                                toggle data
+                                </a>
+                            </div>
+                            
                             <div className="collapse" id={`${id}`}>
-                                <div className="well">
-                                    {person.personal.first_name}
-                                </div>
+                                <DataNav {...person}/>
                             </div>
                         </div>
                     

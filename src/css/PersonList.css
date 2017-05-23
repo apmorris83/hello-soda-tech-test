@@ -7,3 +7,7 @@
     padding: 10px;
     align-items: center;
 }
+
+.toggle-button {
+    justify-content: center;
+}
