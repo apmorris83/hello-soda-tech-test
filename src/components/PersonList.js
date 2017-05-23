@@ -24,7 +24,7 @@ function PersonList (props) {
         </a>
       </h4>
     </div>
-    <div id={person.id} className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id={person.id} className="panel-collapse collapse in" role="tabpanel" aria-labelledby={person.id}>
       <div className="panel-body">
         {person.devices.map((device, id) => {
             return (<p key={id}>{device.name}</p>);
