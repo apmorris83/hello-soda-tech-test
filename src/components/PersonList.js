@@ -43,12 +43,24 @@ function PersonList (props) {
     
     <div className="tab-content container">
       <div className="tab-pane fade active in" id={`${id}_devices`}>
-          {person.devices.map((device) => {
-              return device.name;
+          {person.devices.map((device, id) => {
+              return (
+                  <div key={id} className="row">
+                    <div className="col-sm-6 col-md-4">
+                        <div className="thumbnail">
+                        <img src={require(`../../public/images/${person.personal.avatar}`)}/>
+                        <div className="caption">
+                            <h3>{device.name}</h3>
+                            <p>{device.count}</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+              );
           })}
       </div>
       <div className="tab-pane fade" id={`${id}_social`}>
-          {person.social.map((profile) => {
+          {person.social.map((profile, id) => {
               return profile.type;
           })}
       </div>
