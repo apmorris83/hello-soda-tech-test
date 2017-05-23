@@ -47,10 +47,10 @@ function PersonList (props) {
               return (
                   <div key={id} className="row">
                     <div className="col-sm-6 col-md-4">
-                        <div className="thumbnail">
-                        <img src={require(`../../public/images/${person.personal.avatar}`)}/>
+                        <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/devices.svg')}/>
                         <div className="caption">
-                            <h3>{device.name}</h3>
+                            <h3>{device.vendor} {device.name}</h3>
                             <p>{device.count}</p>
                         </div>
                         </div>
@@ -61,16 +61,51 @@ function PersonList (props) {
       </div>
       <div className="tab-pane fade" id={`${id}_social`}>
           {person.social.map((profile, id) => {
-              return profile.type;
+              return (
+                  <div key={id} className="row">
+                    <div className="col-sm-6 col-md-4">
+                        <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/social.svg')}/>
+                        <div className="caption">
+                            <h3>{profile.type}</h3>
+                            <p>{profile.id}{profile.username}</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+              );
           })}
       </div>
       <div className="tab-pane fade" id={`${id}_interests`}>
-          {person.interests.map((interest) => {
-              return interest.name;
+          {person.interests.map((interest, id) => {
+              return (
+                  <div key={id} className="row">
+                    <div className="col-sm-6 col-md-4">
+                        <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/interests.svg')}/>
+                        <div className="caption">
+                            <h3>{interest.name}</h3>
+                            <p>{interest.count}</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+              );
           })}
       </div>
       <div className="tab-pane fade" id={`${id}_scores`}>
-          {person.scores.footprint_size}
+                  <div key={id} className="row">
+                    <div className="col-sm-6 col-md-4">
+                        <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/scores.svg')}/>
+                        <div className="caption">
+                            <h3>{person.scores.footprint_size}</h3>
+                            <p>{person.scores.id}</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+          
       </div>
     </div>
     

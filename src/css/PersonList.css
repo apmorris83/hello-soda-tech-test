@@ -12,3 +12,12 @@
 .toggle-button {
     justify-content: center;
 }
+
+.data-img {
+    width: 200px;
+}
+
+.data-block {
+    margin-top: 30px;
+    /*background-color: #3fa9f5;*/
+}
