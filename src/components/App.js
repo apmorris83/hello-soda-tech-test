@@ -13,7 +13,7 @@ export default class App extends Component {
     render() {
         console.log(jsonData);
         return (
-            <div>
+            <div className="bground">
                 <Header />
             
 

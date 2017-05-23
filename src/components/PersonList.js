@@ -25,7 +25,44 @@ function PersonList (props) {
                             </div>
                             
                             <div className="collapse" id={`${id}`}>
-                                <DataNav {...person}/>
+        <div className="my-nav">
+            <ul className="nav nav-tabs nav-justified" role="tablist">
+                <li className="active">
+                    <a href="#devices" role="tab" data-toggle="tab" data-target={`#devices, #${id}_else`}>Devices</a>
+                </li>
+                <li>
+                    <a href="#social" role="tab" data-toggle="tab" data-target={`#social, #${id}_else`}>Social</a>
+                </li>
+                <li>
+                    <a href="#interests" role="tab" data-toggle="tab" data-target={`#interests, #${id}_else`}>Interests</a>
+                </li>
+                <li>
+                    <a href="#scores" role="tab" data-toggle="tab" data-target={`#scores, #${id}_else`}>Scores</a>
+                </li>
+            </ul>
+    
+    <div className="tab-content container">
+      <div className="tab-pane fade active in" id="devices">
+          {person.devices.map((device) => {
+              return device.name;
+          })}
+      </div>
+      <div className="tab-pane fade" id="social">
+          {person.social.map((profile) => {
+              return profile.type;
+          })}
+      </div>
+      <div className="tab-pane fade" id="interests">
+          {person.interests.map((interest) => {
+              return interest.name;
+          })}
+      </div>
+      <div className="tab-pane fade" id="scores">
+          {person.scores.footprint_size}
+      </div>
+    </div>
+    
+</div>
                             </div>
                         </div>
                     
