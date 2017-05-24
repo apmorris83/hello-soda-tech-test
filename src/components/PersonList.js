@@ -39,7 +39,7 @@ function PersonList(props) {
                                     </li>
                                 </ul>
 
-                                <div className="tab-content container">
+                                <div className="tab-content container-fluid">
                                     <div className="tab-pane fade active in row" id={`${id}_devices`}>
                                         {person.devices.map((device, id) => {
                                             return (
