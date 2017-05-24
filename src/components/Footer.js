@@ -7,7 +7,7 @@ function Footer () {
     <nav id="Footer" className="nav">
       <div className="nav-center">
         <div className="nav-item">
-          <span>Built by <b>Andy</b></span>
+          <h6>Designed & built by <b>Andy</b></h6>
         </div>
       </div>
     </nav>

@@ -20,7 +20,17 @@
 
 .data-block {
     margin-top: 30px;
-    background-color: #9ed0e7;
+    background-color: #cde2ef;
+}
+
+.data-block-scores {
+    margin-top: 30px;
+    background-color: #cde2ef;
+}
+
+.data-block-interests {
+    margin-top: 30px;
+    background-color: #cde2ef;
 }
 
 h4 {

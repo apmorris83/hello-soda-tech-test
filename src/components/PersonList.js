@@ -43,7 +43,7 @@ function PersonList(props) {
                                     <div className="tab-pane fade active in row" id={`${id}_devices`}>
                                         {person.devices.map((device, id) => {
                                             return (
-                                                <div key={id} className="col-lg-2 col-md-3 col-sm-5">
+                                                <div key={id} className="col-lg-2 col-md-3 col-sm-6">
                                                     <div className="thumbnail data-block">
                                                         <img className="data-img" src={require('../../public/images/devices.png')} />
                                                         <div className="caption">
@@ -60,7 +60,7 @@ function PersonList(props) {
                                         {person.social.map((profile, id) => {
                                             if (profile.type === 'twitter') {
                                                 return (
-                                                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
+                                                    <div key={id} className="col-lg-2 col-md-3 col-sm-6">
                                                         <div className="thumbnail data-block">
                                                             <img className="data-img" src={require('../../public/images/twitter.png')} />
                                                             <div className="caption">
@@ -75,7 +75,7 @@ function PersonList(props) {
                                             }
                                             if (profile.type === 'facebook') {
                                                 return (
-                                                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
+                                                    <div key={id} className="col-lg-2 col-md-3 col-sm-6">
                                                         <div className="thumbnail data-block">
                                                             <img className="data-img" src={require('../../public/images/facebook.png')} />
                                                             <div className="caption">
@@ -90,7 +90,7 @@ function PersonList(props) {
                                             }
                                             else {
                                                 return (
-                                                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
+                                                    <div key={id} className="col-lg-2 col-md-3 col-sm-6">
                                                         <div className="thumbnail data-block">
                                                             <img className="data-img" src={require('../../public/images/social.png')} />
                                                             <div className="caption">
@@ -108,8 +108,8 @@ function PersonList(props) {
                                     <div className="tab-pane fade row" id={`${id}_interests`}>
                                         {person.interests.map((interest, id) => {
                                             return (
-                                                <div key={id} className="col-lg-2 col-md-3 col-sm-5">
-                                                    <div className="thumbnail data-block">
+                                                <div key={id} className="col-lg-2 col-md-3 col-sm-6">
+                                                    <div className="thumbnail data-block-interests">
                                                         <img className="data-img" src={require('../../public/images/interests.png')} />
                                                         <div className="caption">
                                                             <h4><strong>{interest.name}</strong></h4>
@@ -121,35 +121,39 @@ function PersonList(props) {
                                         })}
                                     </div>
                                     <div className="tab-pane fade row" id={`${id}_scores`}>
-                                        <div className="col-lg-2 col-md-3 col-sm-5">
-                                            <div className="thumbnail data-block">
+                                        <div className="col-lg-2 col-md-3 col-sm-6">
+                                            <div className="thumbnail data-block-scores">
                                                 <img className="data-img" src={require('../../public/images/footprint.png')} />
                                                 <div className="caption">
-                                                    <h5><strong>Footprint Size</strong> {person.scores.footprint_size} / 100</h5>
+                                                    <h4><strong>Footprint</strong></h4>
+                                                    <h5><strong>Size</strong> {person.scores.footprint_size}%</h5>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-2 col-md-3 col-sm-5">
-                                            <div className="thumbnail data-block">
+                                        <div className="col-lg-2 col-md-3 col-sm-6">
+                                            <div className="thumbnail data-block-scores">
                                                 <img className="data-img" src={require('../../public/images/commenter.png')} />
                                                 <div className="caption">
-                                                    <h5><strong>Commenter</strong> {person.scores.commenter} / 100</h5>
+                                                    <h4><strong>Commenter</strong></h4>
+                                                    <h5><strong>Size</strong> {person.scores.commenter}%</h5>                                                    
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-2 col-md-3 col-sm-5">
-                                            <div className="thumbnail data-block">
+                                        <div className="col-lg-2 col-md-3 col-sm-6">
+                                            <div className="thumbnail data-block-scores">
                                                 <img className="data-img" src={require('../../public/images/sharer.png')} />
                                                 <div className="caption">
-                                                    <h5><strong>Sharer</strong> {person.scores.sharer} / 100</h5>
+                                                    <h4><strong>Sharer</strong></h4>
+                                                    <h5><strong>Size</strong> {person.scores.sharer}%</h5>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-2 col-md-3 col-sm-5">
-                                            <div className="thumbnail data-block">
+                                        <div className="col-lg-2 col-md-3 col-sm-6">
+                                            <div className="thumbnail data-block-scores">
                                                 <img className="data-img" src={require('../../public/images/id.png')} />
                                                 <div className="caption">
-                                                    <h5><strong>ID</strong> {person.scores.id} / 100</h5>
+                                                    <h4><strong>ID</strong></h4>
+                                                    <h5><strong>Size</strong> {person.scores.id}%</h5>
                                                 </div>
                                             </div>
                                         </div>
