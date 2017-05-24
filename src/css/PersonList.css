@@ -14,9 +14,23 @@
 }
 
 .data-img {
-    width: 200px;
+    width: 150px;
 }
 
 .data-block {
     margin-top: 30px;
+}
+
+h4 {
+    color: #4e342d;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+h5 {
+    color: #999999;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+h5 strong {
+    color: #4e342d;
 }
