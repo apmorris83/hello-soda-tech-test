@@ -42,11 +42,11 @@ function PersonList (props) {
             </ul>
     
     <div className="tab-content container">
-      <div className="tab-pane fade active in" id={`${id}_devices`}>
+      <div className="tab-pane fade active in row" id={`${id}_devices`}>
           {person.devices.map((device, id) => {
               return (
-                  <div key={id} className="row">
-                    <div className="col-sm-6 col-md-4">
+                  
+                    <div key={id} className="col-md-3 col-sm-3">
                         <div className="thumbnail data-block">
                         <img className="data-img" src={require('../../public/images/devices.svg')}/>
                         <div className="caption">
@@ -55,15 +55,15 @@ function PersonList (props) {
                         </div>
                         </div>
                     </div>
-                    </div>
+                    
               );
           })}
       </div>
-      <div className="tab-pane fade" id={`${id}_social`}>
+      <div className="tab-pane fade row" id={`${id}_social`}>
           {person.social.map((profile, id) => {
               return (
-                  <div key={id} className="row">
-                    <div className="col-sm-6 col-md-4">
+                  
+                    <div key={id} className="col-md-3 col-sm-3">
                         <div className="thumbnail data-block">
                         <img className="data-img" src={require('../../public/images/social.svg')}/>
                         <div className="caption">
@@ -72,15 +72,15 @@ function PersonList (props) {
                         </div>
                         </div>
                     </div>
-                    </div>
+                    
               );
           })}
       </div>
-      <div className="tab-pane fade" id={`${id}_interests`}>
+      <div className="tab-pane fade row" id={`${id}_interests`}>
           {person.interests.map((interest, id) => {
               return (
-                  <div key={id} className="row">
-                    <div className="col-sm-6 col-md-4">
+                  
+                    <div key={id} className="col-md-3 col-sm-3">
                         <div className="thumbnail data-block">
                         <img className="data-img" src={require('../../public/images/interests.svg')}/>
                         <div className="caption">
@@ -89,13 +89,13 @@ function PersonList (props) {
                         </div>
                         </div>
                     </div>
-                    </div>
+                    
               );
           })}
       </div>
-      <div className="tab-pane fade" id={`${id}_scores`}>
-                  <div key={id} className="row">
-                    <div className="col-sm-6 col-md-4">
+      <div className="tab-pane fade row" id={`${id}_scores`}>
+              
+                    <div key={id} className="col-md-3 col-sm-3">
                         <div className="thumbnail data-block">
                         <img className="data-img" src={require('../../public/images/scores.svg')}/>
                         <div className="caption">
@@ -104,7 +104,7 @@ function PersonList (props) {
                         </div>
                         </div>
                     </div>
-                    </div>
+                   
           
       </div>
     </div>
@@ -114,8 +114,17 @@ function PersonList (props) {
                         </div>
                     
                 );
-                })}    
-        </div>
+                })} 
+                                           
+                            </div>  
+
+
+
+
+
+
+
+
     );
 }
 
