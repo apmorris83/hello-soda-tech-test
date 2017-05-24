@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import '../css/PersonList.css';
-import DataNav from './DataNav';
 
 function PersonList(props) {
     return (
@@ -26,16 +25,16 @@ function PersonList(props) {
                             <div className="my-nav">
                                 <ul className="nav nav-tabs nav-justified" role="tablist">
                                     <li className="active">
-                                        <a href="#devices" role="tab" data-toggle="tab" data-target={`#devices, #${id}_devices`}>Devices</a>
+                                        <a href="#devices" role="tab" data-toggle="tab" data-target={`#${id}_devices`}>Devices</a>
                                     </li>
                                     <li>
-                                        <a href="#social" role="tab" data-toggle="tab" data-target={`#social, #${id}_social`}>Social</a>
+                                        <a href="#social" role="tab" data-toggle="tab" data-target={`#${id}_social`}>Social</a>
                                     </li>
                                     <li>
-                                        <a href="#interests" role="tab" data-toggle="tab" data-target={`#interests, #${id}_interests`}>Interests</a>
+                                        <a href="#interests" role="tab" data-toggle="tab" data-target={`#${id}_interests`}>Interests</a>
                                     </li>
                                     <li>
-                                        <a href="#scores" role="tab" data-toggle="tab" data-target={`#scores, #${id}_scores`}>Scores</a>
+                                        <a href="#scores" role="tab" data-toggle="tab" data-target={`#${id}_scores`}>Scores</a>
                                     </li>
                                 </ul>
 
