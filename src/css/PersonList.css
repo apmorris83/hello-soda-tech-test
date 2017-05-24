@@ -6,7 +6,7 @@
     /*border: 1px solid #e6e6e6;*/
     padding: 10px;
     align-items: center;
-    background-color: #fff
+    background-color: #fff;
 }
 
 .toggle-button {
@@ -15,10 +15,12 @@
 
 .data-img {
     width: 150px;
+    padding: 20px;
 }
 
 .data-block {
     margin-top: 30px;
+    background-color: #9ed0e7;
 }
 
 h4 {
@@ -27,7 +29,7 @@ h4 {
 }
 
 h5 {
-    color: #999999;
+    color: #4e342d;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 

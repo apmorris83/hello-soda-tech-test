@@ -46,9 +46,9 @@ function PersonList (props) {
           {person.devices.map((device, id) => {
               return (
                   
-                    <div key={id} className="col-md-3 col-sm-5">
+                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
                         <div className="thumbnail data-block">
-                        <img className="data-img" src={require('../../public/images/devices.svg')}/>
+                        <img className="data-img" src={require('../../public/images/devices.png')}/>
                         <div className="caption">
                             <h4><strong>{device.vendor} {device.name}</strong></h4>
                             <h5><strong>Count</strong> {device.count}</h5>
@@ -61,30 +61,59 @@ function PersonList (props) {
       </div>
       <div className="tab-pane fade row" id={`${id}_social`}>
           {person.social.map((profile, id) => {
+              if (profile.type === 'twitter') {
               return (
-                  
-                    <div key={id} className="col-md-3 col-sm-5">
+                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
                         <div className="thumbnail data-block">
-                        <img className="data-img" src={require('../../public/images/social.svg')}/>
-                    <div className="caption">
-                        <h4><strong>{profile.type}</strong></h4>
-                            <h5><strong>Profile ID</strong> {profile.id}{profile.username}</h5>
-                            <h5><strong>Account Age</strong> {profile.account_age} years</h5>
-                            <h5><strong>Followers / Friends</strong> {profile.followers}{profile.friends}</h5>
-                    </div>
-                        
+                            <img className="data-img" src={require('../../public/images/twitter.png')}/>
+                            <div className="caption">
+                                <h4><strong>{profile.type}</strong></h4>
+                                    <h5><strong>Profile ID</strong> {profile.id}{profile.username}</h5>
+                                    <h5><strong>Account Age</strong> {profile.account_age} years</h5>
+                                    <h5><strong>Followers</strong> {profile.followers}</h5>
+                            </div>
                         </div>
                     </div>
-                    
-              );
-          })}
+                );
+              }
+              if (profile.type === 'facebook') {
+              return (
+                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
+                        <div className="thumbnail data-block">
+                            <img className="data-img" src={require('../../public/images/facebook.png')}/>
+                            <div className="caption">
+                                <h4><strong>{profile.type}</strong></h4>
+                                <h5><strong>Profile ID</strong> {profile.id}{profile.username}</h5>
+                                <h5><strong>Account Age</strong> {profile.account_age} years</h5>
+                                <h5><strong>Friends</strong> {profile.friends}</h5>
+                            </div>
+                        </div>
+                    </div>
+                );
+              }
+              else {
+              return (
+                    <div key={id} className="col-lg-2 col-md-3 col-sm-5">
+                        <div className="thumbnail data-block">
+                            <img className="data-img" src={require('../../public/images/social.png')}/>
+                            <div className="caption">
+                                <h4><strong>{profile.type}</strong></h4>
+                                    <h5><strong>Profile ID</strong> {profile.id}{profile.username}</h5>
+                                    <h5><strong>Account Age</strong> {profile.account_age} years</h5>
+                                    <h5><strong>Followers / Friends</strong> {profile.followers}{profile.friends}</h5>
+                            </div>
+                        </div>
+                    </div>
+                );
+              }
+            })}
       </div>
       <div className="tab-pane fade row" id={`${id}_interests`}>
           {person.interests.map((interest, id) => {
               return (
-                <div key={id} className="col-md-3 col-sm-5">
+                <div key={id} className="col-lg-2 col-md-3 col-sm-5">
                     <div className="thumbnail data-block">
-                    <img className="data-img" src={require('../../public/images/interests.svg')}/>
+                    <img className="data-img" src={require('../../public/images/interests.png')}/>
                     <div className="caption">
                             <h4><strong>{interest.name}</strong></h4>
                             <h5><strong>Count</strong> {interest.count}</h5>
@@ -94,21 +123,46 @@ function PersonList (props) {
               );
           })}
       </div>
-      <div className="tab-pane fade row" id={`${id}_scores`}>
-              
-                    <div key={id} className="col-md-3 col-sm-5">
-                        <div className="thumbnail data-block">
-                        <img className="data-img" src={require('../../public/images/scores.svg')}/>
+        <div className="tab-pane fade row" id={`${id}_scores`}>
+                <div className="col-lg-2 col-md-3 col-sm-5">
+                    <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/footprint.png')}/>
                         <div className="caption">
                             <h5><strong>Footprint Size</strong> {person.scores.footprint_size} / 100</h5>
-                            <h5><strong>Commenter</strong> {person.scores.commenter} / 100</h5>
-                            <h5><strong>Sharer</strong> {person.scores.sharer} / 100</h5>
-                        </div>
                         </div>
                     </div>
-                   
-          
-      </div>
+                </div>
+                <div className="col-lg-2 col-md-3 col-sm-5">
+                    <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/commenter.png')}/>
+                        <div className="caption">
+                            <h5><strong>Commenter</strong> {person.scores.commenter} / 100</h5>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-2 col-md-3 col-sm-5">
+                    <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/sharer.png')}/>
+                        <div className="caption">
+                            <h5><strong>Sharer</strong> {person.scores.sharer} / 100</h5>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-2 col-md-3 col-sm-5">
+                    <div className="thumbnail data-block">
+                        <img className="data-img" src={require('../../public/images/id.png')}/>
+                        <div className="caption">
+                            <h5><strong>ID</strong> {person.scores.id} / 100</h5>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        
+
+
+
+
     </div>
     
 </div>
