@@ -9,19 +9,27 @@ function PersonList(props) {
             {props.people.map((person, id) => {
                 return (
                     <div className="media box-element" key={person.id} >
-                        <div className="media-left">
-                            <img className="profile-pic" src={require(`../../public/images/${person.personal.avatar}`)} alt="profile" />
-                        </div>
-                        <div className="media-body">
-                            <h4><strong>{person.personal.first_name} {person.personal.last_name}</strong>, {person.personal.age}</h4>
-                            <h5>{person.personal.job_title}, {person.personal.job_company}</h5>
-                            <h5>{person.personal.city}, {person.personal.country}</h5>
-                        </div>
-                        <div className="media-right toggle-button media-middle">
-                            <a className="btn btn-primary" role="button" data-toggle="collapse" data-target={`#${id}`} aria-expanded="false" aria-controls={`${id}`}>Show / Hide data</a>
+                        <div className="container-fluid" >
+                            <div className="row">
+                                <div className="col-lg-9 col-md-9 col-sm-9">
+                                    <div>
+                                        <img className="profile-pic" src={require(`../../public/images/${person.personal.avatar}`)} alt="profile" />
+                                    <div className="person-info">
+                                        <h4><strong>{person.personal.first_name} {person.personal.last_name}</strong>, {person.personal.age}</h4>
+                                        <h5>{person.personal.job_title}, {person.personal.job_company}</h5>
+                                        <h5>{person.personal.city}, {person.personal.country}</h5>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-md-3 col-sm-3">
+                                    <div className="toggle-button">
+                                        <a className="btn btn-primary" role="button" data-toggle="collapse" data-target={`#${id}`} aria-expanded="false" aria-controls={`${id}`}>Show / Hide data</a>
+                                    </div>
+                                </div>                
+                            </div>
                         </div>
 
-                        <div className="collapse" id={`${id}`}>
+                        <div className="collapse container-fluid" id={`${id}`}>
                             <div className="my-nav">
                                 <ul className="nav nav-tabs nav-justified" role="tablist">
                                     <li className="active">
@@ -104,6 +112,7 @@ function PersonList(props) {
                                             }
                                         })}
                                     </div>
+
                                     <div className="tab-pane fade row" id={`${id}_interests`}>
                                         {person.interests.map((interest, id) => {
                                             return (
@@ -119,6 +128,7 @@ function PersonList(props) {
                                             );
                                         })}
                                     </div>
+                                    
                                     <div className="tab-pane fade row" id={`${id}_scores`}>
                                         <div className="col-lg-2 col-md-3 col-sm-6">
                                             <div className="thumbnail data-block-scores">

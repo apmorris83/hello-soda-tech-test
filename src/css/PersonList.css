@@ -1,20 +1,37 @@
 .profile-pic {
     width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px;
 }
 
 .box-element {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     align-items: center;
     background-color: #fff;
 }
 
+.person-info {
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+}
+
 .toggle-button {
     justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 25px;
 }
 
 .data-img {
     width: 150px;
     padding: 10px;
+}
+
+.my-nav {
+    margin-top: 10px;
 }
 
 .data-block {
